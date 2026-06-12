@@ -16,8 +16,8 @@ return new class extends Migration
             $table->string('phone')->nullable();
             $table->string('secondary_phone')->nullable();
             $table->string('website')->nullable();
-            $table->string('city')->nullable();
-            $table->string('state')->nullable();
+            $table->string('city', 100)->nullable();
+            $table->string('state', 100)->nullable();
             $table->string('pincode')->nullable();
             $table->text('address')->nullable();
             $table->enum('type', ['school', 'college', 'coaching', 'university', 'other'])->default('school');

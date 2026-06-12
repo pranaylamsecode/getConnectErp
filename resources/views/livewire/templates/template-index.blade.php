@@ -21,15 +21,15 @@
                 </div>
                 <div>
                     <label class="block text-xs font-medium text-gray-400 mb-1">Subject *</label>
-                    <input wire:model="subject" type="text" class="w-full bg-surface-800/50 border border-gray-700/50 rounded-lg px-4 py-2.5 text-sm text-gray-200 focus:outline-none focus:border-brand-500/50" placeholder="e.g. Transform {{school_name}} with Smart ERP">
+                    <input wire:model="subject" type="text" class="w-full bg-surface-800/50 border border-gray-700/50 rounded-lg px-4 py-2.5 text-sm text-gray-200 focus:outline-none focus:border-brand-500/50" placeholder="e.g. Transform @{{school_name}} with Smart ERP">
                     @error('subject') <p class="text-xs text-red-400 mt-1">{{ $message }}</p> @enderror
                 </div>
             </div>
             <div>
                 <label class="block text-xs font-medium text-gray-400 mb-1">HTML Content *</label>
-                <textarea wire:model="html_content" rows="10" class="w-full bg-surface-800/50 border border-gray-700/50 rounded-lg px-4 py-2.5 text-sm text-gray-200 font-mono focus:outline-none focus:border-brand-500/50" placeholder="<h1>Hello {{contact_person}}</h1>..."></textarea>
+                <textarea wire:model="html_content" rows="10" class="w-full bg-surface-800/50 border border-gray-700/50 rounded-lg px-4 py-2.5 text-sm text-gray-200 font-mono focus:outline-none focus:border-brand-500/50" placeholder="<h1>Hello @{{contact_person}}</h1>..."></textarea>
                 @error('html_content') <p class="text-xs text-red-400 mt-1">{{ $message }}</p> @enderror
-                <p class="text-xs text-gray-500 mt-1">Available merge tags: <code class="text-brand-400">{{school_name}}</code> <code class="text-brand-400">{{contact_person}}</code> <code class="text-brand-400">{{email}}</code> <code class="text-brand-400">{{city}}</code> <code class="text-brand-400">{{state}}</code> <code class="text-brand-400">{{type}}</code> <code class="text-brand-400">{{student_count}}</code> <code class="text-brand-400">{{board}}</code></p>
+                <p class="text-xs text-gray-500 mt-1">Available merge tags: <code class="text-brand-400">@{{school_name}}</code> <code class="text-brand-400">@{{contact_person}}</code> <code class="text-brand-400">@{{email}}</code> <code class="text-brand-400">@{{city}}</code> <code class="text-brand-400">@{{state}}</code> <code class="text-brand-400">@{{type}}</code> <code class="text-brand-400">@{{student_count}}</code> <code class="text-brand-400">@{{board}}</code></p>
             </div>
             <div>
                 <label class="block text-xs font-medium text-gray-400 mb-1">Category</label>
